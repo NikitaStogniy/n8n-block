@@ -23,9 +23,4 @@ ENV N8N_BASIC_AUTH_ACTIVE=true
 ENV N8N_BASIC_AUTH_USER=$USERNAME
 ENV N8N_BASIC_AUTH_PASSWORD=$PASSWORD
 
-# Install Tini
-USER root
-RUN apk add --no-cache tini
-USER node
-
-CMD ["tini", "--", "start"]
+CMD ["start"]
